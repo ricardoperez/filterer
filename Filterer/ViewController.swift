@@ -13,9 +13,17 @@ class ViewController: UIViewController {
     var filteredImage: UIImage?
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var imageToggle: UIButton!
     
     @IBAction func onImageToggle(sender: UIButton) {
-        imageView.image = filteredImage
+        if imageToggle.selected{
+            let imageOrg = UIImage(named: "bob")
+            imageView.image = imageOrg
+            imageToggle.selected = false
+        }else{
+            imageView.image = filteredImage
+            imageToggle.selected = true
+        }
     }
 
     override func viewDidLoad() {
@@ -25,6 +33,7 @@ class ViewController: UIViewController {
         let rgbaImage = RGBAImage(image: image)!
         let avgRed = 107
         
+        //imageToggle.setTitle("Show original Image", forState: .Selected)
         for y in 0..<rgbaImage.height {
             for x in 0..<rgbaImage.width{
                 let index = y * rgbaImage.width + x

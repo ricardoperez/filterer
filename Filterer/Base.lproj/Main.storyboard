@@ -20,8 +20,9 @@
                                 <rect key="frame" x="13" y="7" width="265" height="272"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHm-XU-SHr">
-                                <rect key="frame" x="69" y="299" width="140" height="30"/>
+                                <rect key="frame" x="53" y="287" width="176" height="30"/>
                                 <state key="normal" title="Show FIltered Image"/>
+                                <state key="selected" title="Show Original Image"/>
                                 <connections>
                                     <action selector="onImageToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6z-VZ-6zx"/>
                                 </connections>
@@ -30,6 +31,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="imageToggle" destination="tHm-XU-SHr" id="kYc-MN-JsB"/>
                         <outlet property="imageView" destination="cGr-Fk-aSO" id="d9f-kc-o7r"/>
                     </connections>
                 </viewController>
