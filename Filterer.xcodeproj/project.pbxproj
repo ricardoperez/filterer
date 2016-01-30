@@ -14,6 +14,7 @@
 		4EB32AF31C5D4FB9001C5334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB32AF11C5D4FB9001C5334 /* LaunchScreen.storyboard */; };
 		4EB32AFE1C5D4FB9001C5334 /* FiltererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB32AFD1C5D4FB9001C5334 /* FiltererTests.swift */; };
 		4EB32B091C5D4FB9001C5334 /* FiltererUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB32B081C5D4FB9001C5334 /* FiltererUITests.swift */; };
+		4EB32B1A1C5D55FD001C5334 /* RGBDImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB32B191C5D55FD001C5334 /* RGBDImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4EB32B041C5D4FB9001C5334 /* FiltererUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FiltererUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB32B081C5D4FB9001C5334 /* FiltererUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltererUITests.swift; sourceTree = "<group>"; };
 		4EB32B0A1C5D4FB9001C5334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EB32B191C5D55FD001C5334 /* RGBDImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBDImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		4EB32AE71C5D4FB9001C5334 /* Filterer */ = {
 			isa = PBXGroup;
 			children = (
+				4EB32B191C5D55FD001C5334 /* RGBDImage.swift */,
 				4EB32AE81C5D4FB9001C5334 /* AppDelegate.swift */,
 				4EB32AEA1C5D4FB9001C5334 /* ViewController.swift */,
 				4EB32AEC1C5D4FB9001C5334 /* Main.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				4EB32AEB1C5D4FB9001C5334 /* ViewController.swift in Sources */,
 				4EB32AE91C5D4FB9001C5334 /* AppDelegate.swift in Sources */,
+				4EB32B1A1C5D55FD001C5334 /* RGBDImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Filterer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixsixsixgames.Filterer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Filterer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sixsixsixgames.Filterer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
