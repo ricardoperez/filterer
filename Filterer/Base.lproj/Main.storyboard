@@ -20,28 +20,135 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bob" translatesAutoresizingMaskIntoConstraints="NO" id="cGr-Fk-aSO">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHm-XU-SHr">
-                                <rect key="frame" x="20" y="556" width="560" height="44"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iez-dD-Q4Q">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHm-XU-SHr">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="147" id="BDE-UH-v5R"/>
+                                            <constraint firstAttribute="height" constant="44" id="lph-mu-sgw"/>
+                                            <constraint firstAttribute="height" constant="44" id="xRE-Jz-Ooj"/>
+                                        </constraints>
+                                        <state key="normal" title="New Image"/>
+                                        <state key="selected" title="Show Original Image"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="BDE-UH-v5R"/>
+                                                <exclude reference="lph-mu-sgw"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onImageToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6z-VZ-6zx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drn-2f-IMy">
+                                        <rect key="frame" x="150" y="0.0" width="150" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="54B-Mc-jsl"/>
+                                            <constraint firstAttribute="width" constant="147" id="Lld-rC-aen"/>
+                                            <constraint firstAttribute="height" constant="44" id="rjJ-tq-BRW"/>
+                                        </constraints>
+                                        <state key="normal" title="Fliter"/>
+                                        <state key="selected" title="Show Original Image"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Lld-rC-aen"/>
+                                                <exclude reference="54B-Mc-jsl"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onImageToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TTq-77-ohY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-gQ-60R">
+                                        <rect key="frame" x="300" y="0.0" width="150" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="FCe-EY-pis"/>
+                                            <constraint firstAttribute="width" constant="147" id="kNq-W9-gIY"/>
+                                            <constraint firstAttribute="height" constant="44" id="m3W-Iu-x4S"/>
+                                        </constraints>
+                                        <state key="normal" title="Original"/>
+                                        <state key="selected" title="Show Original Image"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="kNq-W9-gIY"/>
+                                                <exclude reference="m3W-Iu-x4S"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onImageToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iww-LU-qPK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViH-1Y-um0">
+                                        <rect key="frame" x="450" y="0.0" width="150" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="147" id="E82-sz-tK3"/>
+                                            <constraint firstAttribute="height" constant="44" id="UWL-ET-Zat"/>
+                                            <constraint firstAttribute="height" constant="44" id="px8-jZ-mvF"/>
+                                        </constraints>
+                                        <state key="normal" title="Share"/>
+                                        <state key="selected" title="Show Original Image"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="E82-sz-tK3"/>
+                                                <exclude reference="px8-jZ-mvF"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onImageToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kwJ-9l-fxf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="lph-mu-sgw"/>
+                                    <constraint firstItem="drn-2f-IMy" firstAttribute="width" secondItem="ELE-gQ-60R" secondAttribute="width" id="34M-8T-MiB"/>
+                                    <constraint firstItem="tHm-XU-SHr" firstAttribute="top" secondItem="Iez-dD-Q4Q" secondAttribute="top" id="5Ab-RJ-lq3"/>
+                                    <constraint firstAttribute="bottom" secondItem="ViH-1Y-um0" secondAttribute="bottom" id="9SJ-BP-hIa"/>
+                                    <constraint firstItem="tHm-XU-SHr" firstAttribute="leading" secondItem="Iez-dD-Q4Q" secondAttribute="leading" id="9vI-xd-DAp"/>
+                                    <constraint firstItem="drn-2f-IMy" firstAttribute="top" secondItem="Iez-dD-Q4Q" secondAttribute="top" id="DJr-VQ-xDM"/>
+                                    <constraint firstItem="ViH-1Y-um0" firstAttribute="top" secondItem="Iez-dD-Q4Q" secondAttribute="top" id="G83-Hu-MgS"/>
+                                    <constraint firstItem="ELE-gQ-60R" firstAttribute="width" secondItem="ViH-1Y-um0" secondAttribute="width" id="Je3-YE-wby"/>
+                                    <constraint firstItem="drn-2f-IMy" firstAttribute="leading" secondItem="tHm-XU-SHr" secondAttribute="trailing" id="Ji4-bt-fXh"/>
+                                    <constraint firstItem="ViH-1Y-um0" firstAttribute="leading" secondItem="ELE-gQ-60R" secondAttribute="trailing" id="OUv-s9-i15"/>
+                                    <constraint firstItem="tHm-XU-SHr" firstAttribute="width" secondItem="drn-2f-IMy" secondAttribute="width" id="dnd-5D-9Uh"/>
+                                    <constraint firstItem="ELE-gQ-60R" firstAttribute="leading" secondItem="drn-2f-IMy" secondAttribute="trailing" id="fVs-i7-JQH"/>
+                                    <constraint firstItem="tHm-XU-SHr" firstAttribute="top" secondItem="Iez-dD-Q4Q" secondAttribute="top" id="jXH-Gh-nWW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ELE-gQ-60R" secondAttribute="bottom" id="n8d-Sg-lMw"/>
+                                    <constraint firstAttribute="trailing" secondItem="ViH-1Y-um0" secondAttribute="trailing" id="wTb-qq-cv1"/>
+                                    <constraint firstAttribute="bottom" secondItem="tHm-XU-SHr" secondAttribute="bottom" id="xEa-cd-W5b"/>
+                                    <constraint firstAttribute="bottom" secondItem="drn-2f-IMy" secondAttribute="bottom" id="yOq-Z6-OzX"/>
+                                    <constraint firstItem="ELE-gQ-60R" firstAttribute="top" secondItem="Iez-dD-Q4Q" secondAttribute="top" id="yRe-OY-5G7"/>
                                 </constraints>
-                                <state key="normal" title="Show FIltered Image"/>
-                                <state key="selected" title="Show Original Image"/>
-                                <connections>
-                                    <action selector="onImageToggle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6z-VZ-6zx"/>
-                                </connections>
-                            </button>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jXH-Gh-nWW"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cGr-Fk-aSO" secondAttribute="trailing" constant="-20" id="6Bf-qa-4r5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tHm-XU-SHr" secondAttribute="trailing" id="DYy-hy-IAM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tHm-XU-SHr" secondAttribute="bottom" id="FMH-u0-Upj"/>
                             <constraint firstItem="cGr-Fk-aSO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Hwk-t1-dLn"/>
                             <constraint firstItem="cGr-Fk-aSO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="L0d-T0-rEl"/>
-                            <constraint firstItem="tHm-XU-SHr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dI4-5U-XAJ"/>
-                            <constraint firstItem="tHm-XU-SHr" firstAttribute="top" secondItem="cGr-Fk-aSO" secondAttribute="bottom" id="gCr-v9-9sL"/>
+                            <constraint firstItem="Iez-dD-Q4Q" firstAttribute="top" secondItem="cGr-Fk-aSO" secondAttribute="bottom" id="V5D-11-UCR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Iez-dD-Q4Q" secondAttribute="bottom" id="ZNb-Gg-XIJ"/>
+                            <constraint firstItem="Iez-dD-Q4Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZsR-jW-g7l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Iez-dD-Q4Q" secondAttribute="trailing" id="j14-e5-S5m"/>
+                            <constraint firstItem="Iez-dD-Q4Q" firstAttribute="top" secondItem="cGr-Fk-aSO" secondAttribute="bottom" id="lgS-gJ-std"/>
+                            <constraint firstItem="Iez-dD-Q4Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lt1-BL-jA1"/>
+                            <constraint firstAttribute="trailing" secondItem="Iez-dD-Q4Q" secondAttribute="trailing" id="pJS-HA-2Jq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Iez-dD-Q4Q" secondAttribute="bottom" id="yAf-FJ-YLI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="j14-e5-S5m"/>
+                                <exclude reference="lgS-gJ-std"/>
+                                <exclude reference="lt1-BL-jA1"/>
+                                <exclude reference="yAf-FJ-YLI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="imageToggle" destination="tHm-XU-SHr" id="kYc-MN-JsB"/>
